@@ -593,7 +593,7 @@ namespace WinFormsApp1
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(1232, 0);
+            this.button6.Location = new System.Drawing.Point(1230, 0);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(34, 33);
             this.button6.TabIndex = 2;
@@ -607,7 +607,7 @@ namespace WinFormsApp1
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(1190, 0);
+            this.button7.Location = new System.Drawing.Point(1188, 0);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(36, 33);
             this.button7.TabIndex = 2;
