@@ -67,5 +67,36 @@ namespace Glossary
         {
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var test = textBox2.Text;
+            var wordListObject = WordList.LoadList(test);
+            loadedWordListObjects.Add(wordListObject);
+            if (loadedWordListObjects.Count > 0 && loadedWordListObjects[0] != null)
+            {
+                label2.ForeColor = System.Drawing.Color.Green;
+                label2.Text = $"{loadedWordListObjects[0]} is loaded";
+            }
+            else
+            {
+                label2.Text = $"Cannot find file";
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -66,7 +66,7 @@ namespace ClassLibrary
             }
             else
             {
-                throw new ArgumentException("Could not find path");
+                return null;
             }
         }
         public void Save()
