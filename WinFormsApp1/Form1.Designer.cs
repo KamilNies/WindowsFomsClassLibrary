@@ -241,7 +241,7 @@ namespace WinFormsApp1
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(317, 49);
             this.button2.TabIndex = 4;
-            this.button2.Text = "Add Words";
+            this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // textBox7
@@ -418,7 +418,7 @@ namespace WinFormsApp1
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(317, 49);
             this.button4.TabIndex = 4;
-            this.button4.Text = "Remove Words";
+            this.button4.Text = "Remove";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // textBox8
@@ -431,7 +431,7 @@ namespace WinFormsApp1
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(299, 16);
             this.textBox8.TabIndex = 2;
-            this.textBox8.Text = "Enter all the words you wish to remove here";
+            this.textBox8.Text = "Enter all the words you wish to remove ";
             // 
             // textBox4
             // 
