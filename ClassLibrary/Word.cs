@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    class Word
+    public class Word
     {
         //Auto-implemented properties
         public string[] Translations { get; }   //Translations lagrar översättningarna, en för varje språk
