@@ -1,3 +1,4 @@
+using ClassLibrary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,8 @@ namespace WinFormsApp1
 {
     static class Program
     {
+        public static WordList currentList;
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
