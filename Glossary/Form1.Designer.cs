@@ -36,6 +36,9 @@ namespace Glossary
             this.inputTxtBox = new System.Windows.Forms.TextBox();
             this.btn_add = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.LoadListButton = new System.Windows.Forms.Button();
+            this.CountLable = new System.Windows.Forms.Label();
+            this.sortList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // getListButton
@@ -111,18 +114,53 @@ namespace Glossary
             this.label1.TabIndex = 6;
             this.label1.Text = "label1";
             // 
+            // LoadListButton
+            // 
+            this.LoadListButton.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LoadListButton.Location = new System.Drawing.Point(345, 368);
+            this.LoadListButton.Name = "LoadListButton";
+            this.LoadListButton.Size = new System.Drawing.Size(96, 38);
+            this.LoadListButton.TabIndex = 5;
+            this.LoadListButton.Text = "Load List";
+            this.LoadListButton.UseVisualStyleBackColor = true;
+            this.LoadListButton.Click += new System.EventHandler(this.btn_add_Click);
+            // 
+            // CountLable
+            // 
+            this.CountLable.AutoSize = true;
+            this.CountLable.Location = new System.Drawing.Point(514, 40);
+            this.CountLable.Name = "CountLable";
+            this.CountLable.Size = new System.Drawing.Size(41, 15);
+            this.CountLable.TabIndex = 7;
+            this.CountLable.Text = "Words";
+            this.CountLable.Click += new System.EventHandler(this.CountLable_Click);
+            // 
+            // sortList
+            // 
+            this.sortList.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.sortList.Location = new System.Drawing.Point(55, 412);
+            this.sortList.Name = "sortList";
+            this.sortList.Size = new System.Drawing.Size(88, 38);
+            this.sortList.TabIndex = 0;
+            this.sortList.Text = "Sort List";
+            this.sortList.UseVisualStyleBackColor = true;
+            this.sortList.Click += new System.EventHandler(this.sortList_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(780, 448);
+            this.ClientSize = new System.Drawing.Size(1282, 636);
+            this.Controls.Add(this.CountLable);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.LoadListButton);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.inputTxtBox);
             this.Controls.Add(this.newButton);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.sortList);
             this.Controls.Add(this.getListButton);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -141,6 +179,9 @@ namespace Glossary
         private System.Windows.Forms.TextBox inputTxtBox;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button LoadListButton;
+        private System.Windows.Forms.Label CountLable;
+        private System.Windows.Forms.Button sortList;
     }
 }
 

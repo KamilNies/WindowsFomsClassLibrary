@@ -22,12 +22,7 @@ namespace Glossary
 
         private void getListButton_Click(object sender, EventArgs e)
         {
-            textBox1.Text = null;
-            var test = WordList.GetLists();
-            foreach (var item in test)
-            {
-                textBox1.Text += item + Environment.NewLine;
-            }
+
         }
 
         private void clearButton_Click(object sender, EventArgs e)
@@ -65,7 +60,31 @@ namespace Glossary
 
         private void btn_add_Click(object sender, EventArgs e)
         {
+            string[] wordlistName = inputTxtBox.Text.Split(new char[] { ' ', '.', ',', ';', '<', '>' }, StringSplitOptions.RemoveEmptyEntries);
+            string nameOfWordList = Convert.ToString(wordlistName[0]);
+            var wordLists = WordList.LoadList(nameOfWordList);
+            label1.Text ="List loaded: " +  wordLists.Name;
 
+            string amountOfWords = Convert.ToString(wordLists.Count());
+
+            CountLable.Text = $"\"{wordLists.Name}\" contains {amountOfWords} words.";
+
+        }
+
+        private void Count_Click(object sender, EventArgs e)
+        {
+            loadedWordListObjects.Count();
+
+        }
+
+        private void CountLable_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sortList_Click(object sender, EventArgs e)
+        {
+            string[] wordlistName = inputTxtBox.Text.Split(new char[] { ' ', '.', ',', ';', '<', '>' }, StringSplitOptions.RemoveEmptyEntries);
         }
     }
 }
