@@ -11,17 +11,22 @@ using ClassLibrary;
 
 namespace Glossary
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
-        public Form1()
+        public Form2()
         {
+            InitializeComponent();
+
             Program.currentList = WordList.LoadList("lang3");
 
             for (int i = 0; i < Program.currentList.Count(); i++)
             {
-                removeWordsCheckedListBox.Items.Add(Program.currentList[i], false);
+                removeWordsCheckedListBox.Items.Add(Program.currentList[i].Translations[0], false);
             }
-            InitializeComponent();
+
+            removeFromLangComboBox.Items.AddRange(Program.currentList.Languages);
+
+            removeFromLangComboBox.SelectedIndex = 0;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -40,7 +45,7 @@ namespace Glossary
         /// <param name="wordList">Listan att addera ord till.</param>
         public void AddWords(object sender, EventArgs e)
         {
-            var wordList = Program.currentList = WordList.LoadList("lang3");
+            var wordList = Program.currentList;
 
             if (wordList == null)
             {
@@ -67,6 +72,8 @@ namespace Glossary
 
             addWordsErrorLabel.Text = "Words were successfully added to the list!";
 
+            UpdateRemoveWordsCheckedListBox();
+
         }
 
         /// <summary>
@@ -76,7 +83,7 @@ namespace Glossary
         /// <returns>True om kommandot är skrivet i rätt format, annars false.</returns>
         public void RemoveWords(object sender, EventArgs e)
         {
-            var wordList = Program.currentList = WordList.LoadList("lang3");
+            var wordList = Program.currentList;
 
             if (wordList == null)
             {
@@ -89,32 +96,37 @@ namespace Glossary
 
             if (wordItemsToBeRemoved.Count == 0)
             {
-                addWordsErrorLabel.Text = "Fail! You must enter at least one word.";
+                removeWordsErrorLabel.Text = "Fail! You must enter at least one word.";
                 return;
             }
 
-            int languageIndex = -1;
-
-            for (int j = 0; j < wordList.Languages.Length; j++)
+            while (wordItemsToBeRemoved.Count > 0)
             {
-                if (language == wordList.Languages[j])
-                {
-                    languageIndex = j;
-                    break;
-                }
+                wordList.Remove(removeFromLangComboBox.SelectedIndex, wordItemsToBeRemoved[0].ToString());
+                removeWordsCheckedListBox.Items.Remove(wordItemsToBeRemoved[0]);
             }
-
-            if (languageIndex == -1)
-            {
-                addWordsErrorLabel.Text = "Fail! Invalid language.";
-                return;
-            }
-
-            foreach (string wordStr in wordItemsToBeRemoved)
-                wordList.Remove(languageIndex, wordStr);
 
             wordList.Save();
-            addWordsErrorLabel.Text = "Words were successfully removed!";
+            removeWordsErrorLabel.Text = "Words were successfully removed!";
+        }
+
+        private void removeFromLangComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateRemoveWordsCheckedListBox();
+        }
+
+        private void UpdateRemoveWordsCheckedListBox()
+        {
+            removeWordsCheckedListBox.Items.Clear();
+            for (int i = 0; i < Program.currentList.Count(); i++)
+            {
+                removeWordsCheckedListBox.Items.Add(Program.currentList[i].Translations[removeFromLangComboBox.SelectedIndex], false);
+            }
+        }
+
+        private void removeWordsCheckedListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

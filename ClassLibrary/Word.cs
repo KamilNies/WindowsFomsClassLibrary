@@ -6,33 +6,29 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    class Word
+    public class Word
     {
-        //Auto-implemented properties
-        public string[] Translations { get; }   //Translations lagrar översättningarna, en för varje språk
-        public int FromLanguage { get; }        //Språk som ska översättas till respektive från
-        public int ToLanguage { get; }          //Språk som ska översättas till respektive från
+        public string[] Translations { get; }
+        public int FromLanguage { get; }
+        public int ToLanguage { get; }
 
-        //Constructors
-        public Word(params string[] translations)
-        {
-            FromLanguage = 0;                               //Temp
-            ToLanguage = FromLanguage + 1;                  //Temp (out of range exception?)
-            Translations = new string[translations.Length];
-            for (int i = 0; i < translations.Length; i++)
-            {
-                Translations[i] = translations[i];
-            }
-        }
+        public Word(params string[] translations) : this(0, 0, translations) { }
+
         public Word(int fromLanguage, int toLanguage, params string[] translations)
         {
             FromLanguage = fromLanguage;
             ToLanguage = toLanguage;
-            Translations = new string[translations.Length];
-            for (int i = 0; i < translations.Length; i++)
-            {
-                Translations[i] = translations[i];
-            }
+            Translations = translations;
+        }
+
+        /// <summary>
+        /// Kollar om två Words är lika genom att jämföra deras egenskaper.
+        /// </summary>
+        /// <param name="word">Word att jämföra med.</param>
+        /// <returns></returns>
+        public bool Equals(Word word)
+        {
+            return (Translations.SequenceEqual(word.Translations) && FromLanguage == word.FromLanguage && ToLanguage == word.ToLanguage);
         }
     }
 }
