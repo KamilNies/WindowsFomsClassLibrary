@@ -61,7 +61,7 @@ namespace ClassLibrary
                 }
                 else
                 {
-                    throw new IndexOutOfRangeException("Cannot read file. The file is empty");
+                    return null; ;
                 }
             }
             else

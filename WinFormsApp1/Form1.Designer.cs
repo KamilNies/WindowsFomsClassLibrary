@@ -32,9 +32,9 @@ namespace WinFormsApp1
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.createButton = new System.Windows.Forms.Button();
+            this.createListLanguageTxtBox = new System.Windows.Forms.TextBox();
+            this.createListFileNameTxtBox = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -51,8 +51,8 @@ namespace WinFormsApp1
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.loadButton = new System.Windows.Forms.Button();
+            this.loadFileNameTxtBox = new System.Windows.Forms.TextBox();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -77,12 +77,11 @@ namespace WinFormsApp1
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
+            this.exitApplicationButton = new System.Windows.Forms.Button();
+            this.minimizeApplicationButton = new System.Windows.Forms.Button();
+            this.fileLoadedLabel = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -98,7 +97,6 @@ namespace WinFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -107,9 +105,9 @@ namespace WinFormsApp1
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.createButton);
+            this.panel1.Controls.Add(this.createListLanguageTxtBox);
+            this.panel1.Controls.Add(this.createListFileNameTxtBox);
             this.panel1.Controls.Add(this.panel11);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.panel14);
@@ -131,45 +129,45 @@ namespace WinFormsApp1
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // createButton
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(20, 207);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(275, 50);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Create";
-            this.button1.UseVisualStyleBackColor = true;
+            this.createButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("createButton.BackgroundImage")));
+            this.createButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.createButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.createButton.FlatAppearance.BorderSize = 0;
+            this.createButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.createButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.createButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.createButton.Location = new System.Drawing.Point(20, 207);
+            this.createButton.Name = "createButton";
+            this.createButton.Size = new System.Drawing.Size(275, 50);
+            this.createButton.TabIndex = 4;
+            this.createButton.Text = "Create";
+            this.createButton.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // createListLanguageTxtBox
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox6.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.textBox6.Location = new System.Drawing.Point(20, 163);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(275, 16);
-            this.textBox6.TabIndex = 2;
-            this.textBox6.Text = "Enter all languages seperated by space";
+            this.createListLanguageTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.createListLanguageTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.createListLanguageTxtBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.createListLanguageTxtBox.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.createListLanguageTxtBox.Location = new System.Drawing.Point(20, 163);
+            this.createListLanguageTxtBox.Name = "createListLanguageTxtBox";
+            this.createListLanguageTxtBox.Size = new System.Drawing.Size(275, 16);
+            this.createListLanguageTxtBox.TabIndex = 2;
+            this.createListLanguageTxtBox.Text = "Enter all languages seperated by space";
             // 
-            // textBox1
+            // createListFileNameTxtBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.textBox1.Location = new System.Drawing.Point(20, 93);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(275, 16);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "Enter file name with .dat extension";
+            this.createListFileNameTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.createListFileNameTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.createListFileNameTxtBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.createListFileNameTxtBox.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.createListFileNameTxtBox.Location = new System.Drawing.Point(20, 93);
+            this.createListFileNameTxtBox.Name = "createListFileNameTxtBox";
+            this.createListFileNameTxtBox.Size = new System.Drawing.Size(275, 16);
+            this.createListFileNameTxtBox.TabIndex = 2;
+            this.createListFileNameTxtBox.Text = "Enter file name with .dat extension";
             // 
             // panel11
             // 
@@ -327,8 +325,8 @@ namespace WinFormsApp1
             this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel5.Controls.Add(this.pictureBox3);
-            this.panel5.Controls.Add(this.button3);
-            this.panel5.Controls.Add(this.textBox3);
+            this.panel5.Controls.Add(this.loadButton);
+            this.panel5.Controls.Add(this.loadFileNameTxtBox);
             this.panel5.Controls.Add(this.panel15);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.label5);
@@ -348,33 +346,34 @@ namespace WinFormsApp1
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
             // 
-            // button3
+            // loadButton
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(20, 207);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(275, 50);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Load";
-            this.button3.UseVisualStyleBackColor = true;
+            this.loadButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("loadButton.BackgroundImage")));
+            this.loadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.loadButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.loadButton.FlatAppearance.BorderSize = 0;
+            this.loadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loadButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.loadButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.loadButton.Location = new System.Drawing.Point(20, 207);
+            this.loadButton.Name = "loadButton";
+            this.loadButton.Size = new System.Drawing.Size(275, 50);
+            this.loadButton.TabIndex = 4;
+            this.loadButton.Text = "Load";
+            this.loadButton.UseVisualStyleBackColor = true;
+            this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
             // 
-            // textBox3
+            // loadFileNameTxtBox
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.textBox3.Location = new System.Drawing.Point(20, 132);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(276, 16);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.Text = "Enter file name with .dat extension";
+            this.loadFileNameTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.loadFileNameTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.loadFileNameTxtBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.loadFileNameTxtBox.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.loadFileNameTxtBox.Location = new System.Drawing.Point(20, 132);
+            this.loadFileNameTxtBox.Name = "loadFileNameTxtBox";
+            this.loadFileNameTxtBox.Size = new System.Drawing.Size(276, 16);
+            this.loadFileNameTxtBox.TabIndex = 2;
+            this.loadFileNameTxtBox.Text = "Enter file name with .dat extension";
             // 
             // panel15
             // 
@@ -646,53 +645,53 @@ namespace WinFormsApp1
             this.pictureBox6.TabIndex = 1;
             this.pictureBox6.TabStop = false;
             // 
-            // button6
+            // exitApplicationButton
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(1254, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(34, 33);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "x";
-            this.button6.UseVisualStyleBackColor = false;
+            this.exitApplicationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.exitApplicationButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitApplicationButton.FlatAppearance.BorderSize = 0;
+            this.exitApplicationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitApplicationButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.exitApplicationButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.exitApplicationButton.Location = new System.Drawing.Point(1254, 3);
+            this.exitApplicationButton.Name = "exitApplicationButton";
+            this.exitApplicationButton.Size = new System.Drawing.Size(34, 33);
+            this.exitApplicationButton.TabIndex = 2;
+            this.exitApplicationButton.Text = "x";
+            this.exitApplicationButton.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // minimizeApplicationButton
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(1215, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(36, 33);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "_";
-            this.button7.UseVisualStyleBackColor = false;
+            this.minimizeApplicationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.minimizeApplicationButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.minimizeApplicationButton.FlatAppearance.BorderSize = 0;
+            this.minimizeApplicationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeApplicationButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.minimizeApplicationButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.minimizeApplicationButton.Location = new System.Drawing.Point(1215, 3);
+            this.minimizeApplicationButton.Name = "minimizeApplicationButton";
+            this.minimizeApplicationButton.Size = new System.Drawing.Size(36, 33);
+            this.minimizeApplicationButton.TabIndex = 2;
+            this.minimizeApplicationButton.Text = "_";
+            this.minimizeApplicationButton.UseVisualStyleBackColor = false;
             // 
-            // label13
+            // fileLoadedLabel
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Location = new System.Drawing.Point(6, 50);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(115, 21);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "No list loaded";
+            this.fileLoadedLabel.AutoSize = true;
+            this.fileLoadedLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.fileLoadedLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.fileLoadedLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.fileLoadedLabel.Location = new System.Drawing.Point(6, 50);
+            this.fileLoadedLabel.Name = "fileLoadedLabel";
+            this.fileLoadedLabel.Size = new System.Drawing.Size(115, 21);
+            this.fileLoadedLabel.TabIndex = 0;
+            this.fileLoadedLabel.Text = "No list loaded";
             // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel13.Controls.Add(this.button6);
-            this.panel13.Controls.Add(this.button7);
+            this.panel13.Controls.Add(this.exitApplicationButton);
+            this.panel13.Controls.Add(this.minimizeApplicationButton);
             this.panel13.Controls.Add(this.label14);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(0, 0);
@@ -711,18 +710,6 @@ namespace WinFormsApp1
             this.label14.Size = new System.Drawing.Size(68, 18);
             this.label14.TabIndex = 0;
             this.label14.Text = "Glossery";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(1157, 52);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(55, 62);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 1;
-            this.pictureBox7.TabStop = false;
             // 
             // button8
             // 
@@ -779,10 +766,9 @@ namespace WinFormsApp1
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.panel9);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.fileLoadedLabel);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
@@ -810,7 +796,6 @@ namespace WinFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -822,8 +807,8 @@ namespace WinFormsApp1
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox createListFileNameTxtBox;
+        private System.Windows.Forms.Button createButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -834,8 +819,8 @@ namespace WinFormsApp1
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button loadButton;
+        private System.Windows.Forms.TextBox loadFileNameTxtBox;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -853,16 +838,16 @@ namespace WinFormsApp1
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox createListLanguageTxtBox;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button exitApplicationButton;
+        private System.Windows.Forms.Button minimizeApplicationButton;
+        private System.Windows.Forms.Label fileLoadedLabel;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel14;
@@ -870,7 +855,6 @@ namespace WinFormsApp1
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.TextBox textBox7;
