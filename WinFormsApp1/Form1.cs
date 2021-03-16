@@ -35,7 +35,7 @@ namespace WinFormsApp1
                 else
                 {
                     fileLoadedLabel.ForeColor = Color.Green;
-                    fileLoadedLabel.Text = $"{Program.currentList.Name}.dat loaded";
+                    fileLoadedLabel.Text = $"{Program.currentList.Name}.dat loaded. Contains: {Program.currentList.Count()} word objects";
                 }
             }
         }
