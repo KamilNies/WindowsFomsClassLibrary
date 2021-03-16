@@ -70,8 +70,8 @@ namespace WinFormsApp1
             this.label8 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.Sort_Button = new System.Windows.Forms.Button();
+            this.SortListTxtBox = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -84,7 +84,7 @@ namespace WinFormsApp1
             this.label14 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.outputTxtBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -546,8 +546,8 @@ namespace WinFormsApp1
             this.panel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel9.BackgroundImage")));
             this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel9.Controls.Add(this.pictureBox5);
-            this.panel9.Controls.Add(this.button5);
-            this.panel9.Controls.Add(this.textBox5);
+            this.panel9.Controls.Add(this.Sort_Button);
+            this.panel9.Controls.Add(this.SortListTxtBox);
             this.panel9.Controls.Add(this.panel16);
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Controls.Add(this.label9);
@@ -567,33 +567,34 @@ namespace WinFormsApp1
             this.pictureBox5.TabIndex = 5;
             this.pictureBox5.TabStop = false;
             // 
-            // button5
+            // Sort_Button
             // 
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(20, 205);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(275, 50);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Sort";
-            this.button5.UseVisualStyleBackColor = true;
+            this.Sort_Button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Sort_Button.BackgroundImage")));
+            this.Sort_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Sort_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Sort_Button.FlatAppearance.BorderSize = 0;
+            this.Sort_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sort_Button.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Sort_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Sort_Button.Location = new System.Drawing.Point(20, 205);
+            this.Sort_Button.Name = "Sort_Button";
+            this.Sort_Button.Size = new System.Drawing.Size(275, 50);
+            this.Sort_Button.TabIndex = 4;
+            this.Sort_Button.Text = "Sort";
+            this.Sort_Button.UseVisualStyleBackColor = true;
+            this.Sort_Button.Click += new System.EventHandler(this.Sort_Button_Click);
             // 
-            // textBox5
+            // SortListTxtBox
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.textBox5.Location = new System.Drawing.Point(20, 128);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(299, 16);
-            this.textBox5.TabIndex = 2;
-            this.textBox5.Text = "Enter language of choice";
+            this.SortListTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.SortListTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SortListTxtBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SortListTxtBox.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.SortListTxtBox.Location = new System.Drawing.Point(20, 128);
+            this.SortListTxtBox.Name = "SortListTxtBox";
+            this.SortListTxtBox.Size = new System.Drawing.Size(299, 16);
+            this.SortListTxtBox.TabIndex = 2;
+            this.SortListTxtBox.Text = "Enter language of choice";
             // 
             // panel16
             // 
@@ -743,18 +744,18 @@ namespace WinFormsApp1
             this.button9.Text = "Practice";
             this.button9.UseVisualStyleBackColor = false;
             // 
-            // textBox7
+            // outputTxtBox
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox7.Location = new System.Drawing.Point(7, 120);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(622, 275);
-            this.textBox7.TabIndex = 7;
-            this.textBox7.Text = resources.GetString("textBox7.Text");
+            this.outputTxtBox.BackColor = System.Drawing.SystemColors.Control;
+            this.outputTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.outputTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.outputTxtBox.Location = new System.Drawing.Point(7, 120);
+            this.outputTxtBox.Multiline = true;
+            this.outputTxtBox.Name = "outputTxtBox";
+            this.outputTxtBox.ReadOnly = true;
+            this.outputTxtBox.Size = new System.Drawing.Size(622, 275);
+            this.outputTxtBox.TabIndex = 7;
+            this.outputTxtBox.Text = resources.GetString("outputTxtBox.Text");
             // 
             // Form1
             // 
@@ -763,7 +764,7 @@ namespace WinFormsApp1
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1291, 681);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.outputTxtBox);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.pictureBox6);
@@ -833,8 +834,8 @@ namespace WinFormsApp1
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button Sort_Button;
+        private System.Windows.Forms.TextBox SortListTxtBox;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -857,7 +858,7 @@ namespace WinFormsApp1
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox outputTxtBox;
     }
 }
 
